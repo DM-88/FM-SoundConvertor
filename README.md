@@ -1,11 +1,11 @@
 # FM-SoundConvertor
-Mucom88 に付属している、FmToneEditor で作成した音色を活用する為の、Windows用コマンドラインツールです。  
+MUCOM88 に付属している、FmToneEditor で作成した音色を活用する為の、Windows用コマンドラインツールです。  
 
 以下の音色定義を相互変換します。  
 ||入出力拡張子|入力定義|出力定義|
 |:-:|:-:|:-:|:-:|
-|Mucom88|.muc|MUCOM形式<br>mmldrv形式|MUCOM形式|
-|Mucom88音色ファイル|.dat|dat形式|dat形式|
+|MUCOM88|.muc|MUCOM形式<br>mmldrv形式|MUCOM形式|
+|MUCOM88音色ファイル|.dat|dat形式|dat形式|
 |FMP|.mwi|旧式<br>F形式<br>FA形式<br>FC形式|FA形式|
 |PMD|.mml|PMD形式|PMD形式|
 
@@ -35,7 +35,7 @@ FM-SoundConvertor.exe 変換オプション 入力ファイル
 
 <br>
 
-# Mucom88 音色番号解釈の独自仕様
+# MUCOM88 音色番号解釈の独自仕様
 音色番号を無記入にすると、直前の音色番号+1 として解釈します。
 ~~~
 ;音色番号0 と解釈する
