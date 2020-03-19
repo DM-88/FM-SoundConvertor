@@ -9,6 +9,8 @@ Mucom88 に付属している、FmToneEditor で作成した音色を活用す�
 |FMP|.mwi|旧式<br>F形式<br>FA形式<br>FC形式|FA形式|
 |PMD|.mml|PMD形式|PMD形式|
 
+実行ファイルのダウンロードは[こちら](https://github.com/DM-88/FM-SoundConvertor/blob/master/FM-SoundConvertor/bin/Release/FM-SoundConvertor.exe)  
+
 <br>
 
 # 使い方
@@ -68,3 +70,5 @@ FM-SoundConvertor.exe 変換オプション 入力ファイル
 Windows環境での不要なファイルを嫌い、.NET Framework で作成しましたが、.NET Core への転用は容易かと思います。  
 
 音色定義に特化した簡易パーサーの為、ユースケースによっては正常に変換できない場合があるかもしれません。  
+
+自分用に作ったので、気の利いたものではありませんが、何かのお役に立てば幸いです。  
