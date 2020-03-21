@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FM-SoundConvertor")]
-[assembly: AssemblyCopyright("Copyright ©D.M 2020")]
+[assembly: AssemblyCopyright("Copyright ©D.M.88 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
