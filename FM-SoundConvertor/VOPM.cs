@@ -186,6 +186,10 @@ namespace FM_SoundConvertor
 				Buffer[o + (int)ePut.FB] = (byte)Tone.FB;
 				Buffer[o + (int)ePut.Mask] = 0xf << 3;
 
+				if (String.IsNullOrWhiteSpace(Tone.Name))
+				{
+					Tone.Name = Tone.Number.ToString();
+				}
 				Buffer[o + (int)ePut.Name0] = (byte)((Tone.Name.Length > 0) ? Tone.Name[0] : 0);
 				Buffer[o + (int)ePut.Name1] = (byte)((Tone.Name.Length > 1) ? Tone.Name[1] : 0);
 				Buffer[o + (int)ePut.Name2] = (byte)((Tone.Name.Length > 2) ? Tone.Name[2] : 0);
