@@ -40,6 +40,11 @@ namespace FM_SoundConvertor
 								Option.bDat = true;
 								break;
 							}
+						case "-vopm":
+							{
+								Option.bVopm = true;
+								break;
+							}
 					}
 					aArg[oArg] = String.Empty;
 				}
@@ -50,6 +55,7 @@ namespace FM_SoundConvertor
 			Pmd.Reader(aArg, Option);
 			Muc.Reader(aArg, Option);
 			Dat.Reader(aArg, Option);
+			Vopm.Reader(aArg, Option);
 			return 0;
 		}
 	}

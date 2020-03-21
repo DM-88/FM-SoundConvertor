@@ -55,6 +55,7 @@
     <Compile Include="Pmd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tone.cs" />
+    <Compile Include="Vopm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,6 +9,7 @@ namespace FM_SoundConvertor
 		public bool bDat;
 		public bool bPmd;
 		public bool bFmp;
+		public bool bVopm;
 
 
 
@@ -18,6 +19,7 @@ namespace FM_SoundConvertor
 			bDat = false;
 			bPmd = false;
 			bFmp = false;
+			bVopm = false;
 		}
 	}
 }
