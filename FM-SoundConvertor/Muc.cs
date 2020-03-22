@@ -102,9 +102,9 @@ namespace FM_SoundConvertor
 			var Type = eType.Mucom;
 			var nTok = 0;
 
+			var BufferDat = Dat.New();
 			var BufferFmp = "";
 			var BufferPmd = "";
-			var BufferDat = Dat.New();
 			var BufferVopm = Vopm.New();
 
 			var State = eState.Entry;
@@ -226,9 +226,9 @@ namespace FM_SoundConvertor
 											{
 												vTone.Name = Tok.Substring(oHead+1, oTail-oHead-1);
 
+												if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 												if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 												if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
-												if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 												if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
 											}
 										}
@@ -242,9 +242,9 @@ namespace FM_SoundConvertor
 
 											vTone.Name = "";
 
+											if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 											if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 											if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
-											if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 											if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
 										}
 										break;
@@ -256,9 +256,9 @@ namespace FM_SoundConvertor
 				}
 			}
 
+			if (Option.bDat) Dat.Writer(Path, BufferDat);
 			if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 			if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
-			if (Option.bDat) Dat.Writer(Path, BufferDat);
 			if (Option.bVopm) Vopm.Writer(Path, BufferVopm);
 		}
 

@@ -94,9 +94,9 @@ namespace FM_SoundConvertor
 			var vTone = new Tone();
 			int nTok = 0;
 
-			var BufferPmd = "";
 			var BufferMuc = "";
 			var BufferDat = Dat.New();
+			var BufferPmd = "";
 			var BufferVopm = Vopm.New();
 
 			var State = eState.Entry;
@@ -225,9 +225,9 @@ namespace FM_SoundConvertor
 									int.TryParse(aTok[1], out vTone.FB);
 									vTone.Name = "";
 
-									if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
 									if (Option.bMuc) Muc.Put(vTone, ref BufferMuc);
 									if (Option.bDat) Dat.Put(vTone, ref BufferDat);
+									if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
 									if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
 								}
 							}
@@ -237,9 +237,9 @@ namespace FM_SoundConvertor
 				}
 			}
 
-			if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
 			if (Option.bMuc) Muc.Writer(Path, BufferMuc);
 			if (Option.bDat) Dat.Writer(Path, BufferDat);
+			if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
 			if (Option.bVopm) Vopm.Writer(Path, BufferVopm);
 		}
 

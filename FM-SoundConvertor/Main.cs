@@ -20,16 +20,6 @@ namespace FM_SoundConvertor
 				{
 					switch (Arg)
 					{
-						case "-fmp":
-							{
-								Option.bFmp = true;
-								break;
-							}
-						case "-pmd":
-							{
-								Option.bPmd = true;
-								break;
-							}
 						case "-muc":
 							{
 								Option.bMuc = true;
@@ -38,6 +28,16 @@ namespace FM_SoundConvertor
 						case "-dat":
 							{
 								Option.bDat = true;
+								break;
+							}
+						case "-fmp":
+							{
+								Option.bFmp = true;
+								break;
+							}
+						case "-pmd":
+							{
+								Option.bPmd = true;
 								break;
 							}
 						case "-vopm":
@@ -51,10 +51,10 @@ namespace FM_SoundConvertor
 				++oArg;
 			}
 
-			Fmp.Reader(aArg, Option);
-			Pmd.Reader(aArg, Option);
 			Muc.Reader(aArg, Option);
 			Dat.Reader(aArg, Option);
+			Fmp.Reader(aArg, Option);
+			Pmd.Reader(aArg, Option);
 			Vopm.Reader(aArg, Option);
 			return 0;
 		}

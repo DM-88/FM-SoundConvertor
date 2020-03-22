@@ -71,9 +71,9 @@ namespace FM_SoundConvertor
 			var vTone = new Tone();
 			bool bLineComment = false;
 
-			var BufferFmp = "";
 			var BufferMuc = "";
 			var BufferDat = Dat.New();
+			var BufferFmp = "";
 			var BufferVopm = Vopm.New();
 
 			var State = eState.Entry;
@@ -177,9 +177,9 @@ namespace FM_SoundConvertor
 							{
 								GetOp(aTok, ref vTone.aOp[3]);
 
-								if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 								if (Option.bMuc) Muc.Put(vTone, ref BufferMuc);
 								if (Option.bDat) Dat.Put(vTone, ref BufferDat);
+								if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 								if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
 							}
 							State = eState.Entry;
@@ -188,9 +188,9 @@ namespace FM_SoundConvertor
 				}
 			}
 
-			if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 			if (Option.bMuc) Muc.Writer(Path, BufferMuc);
 			if (Option.bDat) Dat.Writer(Path, BufferDat);
+			if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 			if (Option.bVopm) Vopm.Writer(Path, BufferVopm);
 		}
 

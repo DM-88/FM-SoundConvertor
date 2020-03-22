@@ -218,25 +218,25 @@ namespace FM_SoundConvertor
 			{
 				Tone vTone = new Tone();
 
-				var BufferFmp = "";
-				var BufferPmd = "";
 				var BufferMuc = "";
 				var BufferDat = Dat.New();
+				var BufferFmp = "";
+				var BufferPmd = "";
 
 				for (int i = 0; i < ToneLength(); ++i)
 				{
 					Get(ref vTone, Buffer, i);
 
-					if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
-					if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
 					if (Option.bMuc) Muc.Put(vTone, ref BufferMuc);
 					if (Option.bDat) Dat.Put(vTone, ref BufferDat);
+					if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
+					if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
 				}
 
-				if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
-				if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
 				if (Option.bMuc) Muc.Writer(Path, BufferMuc);
 				if (Option.bDat) Dat.Writer(Path, BufferDat);
+				if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
+				if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
 			}
 		}
 
