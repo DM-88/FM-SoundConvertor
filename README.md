@@ -1,5 +1,5 @@
 # FM-SoundConvertor
-MUCOM88 に付属している、FmToneEditor で作成した音色を活用する為の、Windows用コマンドラインツールです。  
+[MUCOM88](https://onitama.tv/mucom88/) に付属している、FmToneEditor で作成した音色を活用する為の、Windows用コマンドラインツールです。  
 
 以下の音色定義を相互変換します。  
 ||入出力拡張子|入力定義|出力定義|
