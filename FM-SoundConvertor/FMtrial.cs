@@ -74,7 +74,7 @@ namespace FM_SoundConvertor
 
 		static int Get(byte[] Buffer, int O, int e, int Max)
 		{
-			return (int)(BitConverter.ToSingle(Buffer, O + (e * sizeof(float))) * Max);
+			return (int)Math.Round(BitConverter.ToSingle(Buffer, O + (e * sizeof(float))) * Max);
 		}
 
 
