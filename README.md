@@ -9,7 +9,7 @@
 |FMP|.mwi|旧式<br>F形式<br>FA形式<br>FC形式|FA形式|
 |PMD|.mml|PMD形式|PMD形式|
 |VOPM|.fxb|fxb形式|fxb形式|
-|FMtrial|.fxb|fxb形式|fxb形式|
+|FM trial v4.3|.fxb|fxb形式|fxb形式|
 
 実行ファイルのダウンロードは[こちら](https://github.com/DM-88/FM-SoundConvertor/blob/master/FM-SoundConvertor/bin/Release/FM-SoundConvertor.exe)  
 
