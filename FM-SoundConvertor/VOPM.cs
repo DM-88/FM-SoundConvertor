@@ -211,10 +211,34 @@ namespace FM_SoundConvertor
 
 
 
+		public static bool IsValid(byte[] Buffer)
+		{
+			return (Buffer[0x00] == (byte)'C'
+				&&	Buffer[0x01] == (byte)'c'
+				&&	Buffer[0x02] == (byte)'n'
+				&&	Buffer[0x03] == (byte)'K'
+				&&	Buffer[0x08] == (byte)'F'
+				&&	Buffer[0x09] == (byte)'B'
+				&&	Buffer[0x0a] == (byte)'C'
+				&&	Buffer[0x0b] == (byte)'h'
+				&&	Buffer[0x0f] == 1
+				&&	Buffer[0x10] == (byte)'V'
+				&&	Buffer[0x11] == (byte)'O'
+				&&	Buffer[0x12] == (byte)'P'
+				&&	Buffer[0x13] == (byte)'M'
+				&&	Buffer[0x17] == 1
+				&&	Buffer[0x1b] == 0x80
+				&&	Buffer[0x9e] == 0x23
+				&&	Buffer[0x9f] == 0x80
+			);
+		}
+
+
+
 		public static void Reader(string Path, Option @Option)
 		{
 			var Buffer = ReadByte(Path);
-			if (Buffer.Length == FxbLength())
+			if (Buffer.Length == FxbLength() && IsValid(Buffer))
 			{
 				Tone vTone = new Tone();
 
@@ -222,6 +246,7 @@ namespace FM_SoundConvertor
 				var BufferDat = Dat.New();
 				var BufferFmp = "";
 				var BufferPmd = "";
+				var BufferFMtrial = FMtrial.New();
 
 				for (int i = 0; i < ToneLength(); ++i)
 				{
@@ -231,12 +256,14 @@ namespace FM_SoundConvertor
 					if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 					if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 					if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
+					if (Option.bFMtrial) FMtrial.Put(vTone, ref BufferFMtrial);
 				}
 
 				if (Option.bMuc) Muc.Writer(Path, BufferMuc);
 				if (Option.bDat) Dat.Writer(Path, BufferDat);
 				if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 				if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
+				if (Option.bFMtrial) FMtrial.Writer(Path, BufferFMtrial);
 			}
 		}
 

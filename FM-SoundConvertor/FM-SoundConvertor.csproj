@@ -48,6 +48,7 @@
     <Compile Include="Directory.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Fmp.cs" />
+    <Compile Include="FMtrial.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Muc.cs" />
     <Compile Include="Option.cs" />

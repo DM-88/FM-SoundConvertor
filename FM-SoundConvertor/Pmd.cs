@@ -75,6 +75,7 @@ namespace FM_SoundConvertor
 			var BufferDat = Dat.New();
 			var BufferFmp = "";
 			var BufferVopm = Vopm.New();
+			var BufferFMtrial = FMtrial.New();
 
 			var State = eState.Entry;
 			var aLine = ReadLine(Path);
@@ -181,6 +182,7 @@ namespace FM_SoundConvertor
 								if (Option.bDat) Dat.Put(vTone, ref BufferDat);
 								if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 								if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
+								if (Option.bFMtrial) FMtrial.Put(vTone, ref BufferFMtrial);
 							}
 							State = eState.Entry;
 							break;
@@ -192,6 +194,7 @@ namespace FM_SoundConvertor
 			if (Option.bDat) Dat.Writer(Path, BufferDat);
 			if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 			if (Option.bVopm) Vopm.Writer(Path, BufferVopm);
+			if (Option.bFMtrial) FMtrial.Writer(Path, BufferFMtrial);
 		}
 
 

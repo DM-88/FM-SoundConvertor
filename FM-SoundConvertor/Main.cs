@@ -45,6 +45,11 @@ namespace FM_SoundConvertor
 								Option.bVopm = true;
 								break;
 							}
+						case "-fmtrial":
+							{
+								Option.bFMtrial = true;
+								break;
+							}
 					}
 					aArg[oArg] = String.Empty;
 				}
@@ -56,6 +61,7 @@ namespace FM_SoundConvertor
 			Fmp.Reader(aArg, Option);
 			Pmd.Reader(aArg, Option);
 			Vopm.Reader(aArg, Option);
+			FMtrial.Reader(aArg, Option);
 			return 0;
 		}
 	}

@@ -172,6 +172,7 @@ namespace FM_SoundConvertor
 				var BufferFmp = "";
 				var BufferPmd = "";
 				var BufferVopm = Vopm.New();
+				var BufferFMtrial = FMtrial.New();
 
 				for (int i = 0; i < ToneLength(); ++i)
 				{
@@ -181,12 +182,14 @@ namespace FM_SoundConvertor
 					if (Option.bFmp) Fmp.Put(vTone, ref BufferFmp);
 					if (Option.bPmd) Pmd.Put(vTone, ref BufferPmd);
 					if (Option.bVopm) Vopm.Put(vTone, ref BufferVopm);
+					if (Option.bFMtrial) FMtrial.Put(vTone, ref BufferFMtrial);
 				}
 
 				if (Option.bMuc) Muc.Writer(Path, BufferMuc);
 				if (Option.bFmp) Fmp.Writer(Path, BufferFmp);
 				if (Option.bPmd) Pmd.Writer(Path, BufferPmd);
 				if (Option.bVopm) Vopm.Writer(Path, BufferVopm);
+				if (Option.bFMtrial) FMtrial.Writer(Path, BufferFMtrial);
 			}
 		}
 
