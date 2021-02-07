@@ -9,6 +9,7 @@
 |FMP|.mwi|旧式<br>F形式<br>FA形式<br>FC形式|FA形式|
 |PMD|.mml|PMD形式|PMD形式|
 |VOPM|.fxb|fxb形式|fxb形式|
+|FMtrial|.fxb|fxb形式|fxb形式|
 
 実行ファイルのダウンロードは[こちら](https://github.com/DM-88/FM-SoundConvertor/blob/master/FM-SoundConvertor/bin/Release/FM-SoundConvertor.exe)  
 
@@ -19,13 +20,15 @@
 FM-SoundConvertor.exe 変換オプション 入力ファイル
 
 変換オプション
-  -muc   拡張子が .muc ではない入力ファイルの音色定義を、MUCOM形式に変換し .muc ファイルを出力します。
-  -dat   拡張子が .dat ではない入力ファイルの音色定義を、dat形式に変換し .dat ファイルを出力します。
-  -fmp   拡張子が .mwi ではない入力ファイルの音色定義を、FA形式に変換し .mwi ファイルを出力します。
-  -pmd   拡張子が .mml ではない入力ファイルの音色定義を、PMD形式に変換し .mml ファイルを出力します。
-  -vopm  拡張子が .fxb ではない入力ファイルの音色定義を、fxb形式に変換し .fxb ファイルを出力します。
+  -muc     拡張子が .muc ではない入力ファイルの音色定義を、MUCOM形式に変換し .muc ファイルを出力します。
+  -dat     拡張子が .dat ではない入力ファイルの音色定義を、dat形式に変換し .dat ファイルを出力します。
+  -fmp     拡張子が .mwi ではない入力ファイルの音色定義を、FA形式に変換し .mwi ファイルを出力します。
+  -pmd     拡張子が .mml ではない入力ファイルの音色定義を、PMD形式に変換し .mml ファイルを出力します。
+  -vopm    拡張子が .fxb ではない入力ファイルの音色定義を、fxb形式に変換し .fxb ファイルを出力します。
+  -fmtrial 拡張子が .fxb ではない入力ファイルの音色定義を、fxb形式に変換し .fxb ファイルを出力します。
 
-変換オプションと入力ファイルは、複数個の指定が可能です。
+変換オプションと入力ファイルは、複数個の指定が可能です。  
+注意：-vopm と -fmtrial は、同じ拡張子のファイルを出力してしまうので、併用できません。
 ~~~
 
 <br>
